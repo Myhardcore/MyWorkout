@@ -17,6 +17,7 @@ function App() {
     let [test, setTest] = useState({})
     useEffect(()=> {
         tele.ready()
+        tele.enableClosingConfirmation()
 
     })
     const totalDataHandler = (enteredTotal) => {
@@ -37,7 +38,7 @@ function App() {
         let queryData = `⠀⠀⠀⠀⠀📅  ${showDate.getDate()}.${('0' + (showDate.getMonth() + 1)).slice(-2)}  📅`
         for (let trainType in test) {
             // queryData += `${trainType} \n ${test[trainType].map(i=>`${(i.type).bold()}\n ⚖️ ${i.weight} кг\n ${i.reps.length===0 ? '⏱ '+ i.time + ' сек' : '🔁 ' + i.reps + ' раз'}\n`).join('\n')}`
-            queryData += `\n\n-- ${trainType} -- \n\n ${test[trainType].map(i=>`${(i.type).bold()}\n ⚖️ ${i.weight} кг\n ${i.reps.length===0 ? '⏱ '+ i.time + ' сек' : '🔁 ' + i.reps + ' раз'}`).join('\n')}`
+            queryData += `\n\n-- ${trainType} -- \n\n ${test[trainType].map(i=>`${(i.type).bold()} ${i.weight.length===0 ? '' : '⚖️ ' + i.weight + 'кг.'} \n ${i.reps.length===0 ? '' : '🔁 ' + i.reps + ' повт.'} \n ${i.time.length===0 ? '' : '⏱ '+ i.time + ' сек'}`).join('\n')}`
         }
 
         console.log(queryData)
