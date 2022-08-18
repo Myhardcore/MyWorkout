@@ -6,7 +6,7 @@ function Cart(props){
     let cartAddTrainHandler = () => {
         props.setPage((currPage)=> currPage - 1)
     }
-    let cartData = props.totalData;
+    let cartData = props.totalData
 
     const trainType = localStorage.getItem('trainType')
 
