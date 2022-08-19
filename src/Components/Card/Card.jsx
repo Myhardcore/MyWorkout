@@ -48,9 +48,9 @@ const buttonBlock = trainAdded === false ? (<Button title={'Добавить'} t
                 </h4>
                 <form action="" className="card__inputs">
 
-                    <div className="card__weight"><input className="card__weight--color" type="text" placeholder='кг' inputMode={"numeric"} ref={enteredKG}/></div>
-                    <div className="card__reps"><input className="card__reps--color" type="text" placeholder='кол-во' inputMode={"numeric"} ref={enteredRep}/></div>
-                    <div className="card__time"><input className="card__time--color" type="text" placeholder='сек' inputMode={"numeric"} ref={enteredSec}/></div>
+                    <div className="card__weight"><input className="card__weight--color" type="text" placeholder='кг' inputMode={"decimal"} ref={enteredKG}/></div>
+                    <div className="card__reps"><input className="card__reps--color" type="text" placeholder='кол-во' inputMode={"decimal"} ref={enteredRep}/></div>
+                    <div className="card__time"><input className="card__time--color" type="text" placeholder='сек' inputMode={"decimal"} ref={enteredSec}/></div>
                     <div className="btn__container">
                         {buttonBlock}
                     </div>

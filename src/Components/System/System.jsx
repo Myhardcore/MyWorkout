@@ -23,16 +23,17 @@ return(
 
                 <div className={`emom ${Object.keys(props.dataForClass).some(i=> i.includes('EMOM')) && 'active'}`}>
                     <p className='types__tittle' ref={(c)=>(test.textContent = 'EMOM')}>EMOM</p>
-                    <input className='input__traintype' type="text" placeholder='мин.' inputMode={"numeric"} ref={minutesEM}/>
+                    <input className='input__traintype' type="text" placeholder='мин.' inputMode={"decimal"} ref={minutesEM}/>
                     <Button title={'Добавить'} type={'add'} onClick={onSelectTrainType} id={'1'}/>
                 </div>
 
                 <div className={`amrap ${Object.keys(props.dataForClass).some(i=> i.includes('AMRAP')) && 'active'}`}>
                     <p className='types__tittle' ref={(d)=>(test.textContent = 'AMRAP')}>AMRAP</p>
-                    <input className='input__traintype' type="text" placeholder='мин.' inputMode={"numeric"} ref={minutesAM}/>
+                    <input className='input__traintype' type="text" placeholder='мин.' inputMode={"decimal"} ref={minutesAM}/>
                     <Button title={'Добавить'} type={'add'} onClick={onSelectTrainType} id={'2'}/>
                 </div>
-                <Button title={'Записать тренировку'} type={'add'} onClick={props.onAddingTrain}/>
+                {Object.keys(props.dataForClass).length === 0 ?'':<Button title={'Записать тренировку'} type={'add'} onClick={props.onAddingTrain}/>}
+
 
 
         </form>

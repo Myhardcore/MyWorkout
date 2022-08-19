@@ -21,4 +21,6 @@
 .cart__result.empty{
 background-color: transparent;
 }
-
+.train--heading{
+    background-color: #FFCB02;
+}

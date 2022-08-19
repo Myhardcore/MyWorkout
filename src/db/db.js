@@ -20,6 +20,8 @@ import skruchivaniya from '../images/skruchivaniya.png'
 import stanovayaTyaga from '../images/stanovayaTyaga.png'
 import frontPrised from '../images/frontalnyePrisedaniya.png'
 import yagodichniyMostik from '../images/yagoMostik.png'
+import readyGif from '../images/ready.gif'
+import readyGif2 from '../images/ready2.gif'
 
 
 export function getData() {

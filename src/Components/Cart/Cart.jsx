@@ -16,7 +16,7 @@ function Cart(props){
 
     let cartResult = cartData[trainType].map((item,i)=>{
         return <div className='cart__result--line' key={i++}>
-            {`${i+1}. ${[item.type]} : ${[item.weight]} ${item.weight.length===0 ? '':'кг.,'} ${item.reps} ${item.reps.length===0 ? '':'повт.,'} ${item.time} ${item.time.length===0 ? '':'сек.'};`}
+            {`${i+1}. ${[item.type]} : ${[item.weight]} ${item.weight.length===0 ? '':'кг; '} ${item.reps} ${item.reps.length===0 ? '':'повт; '} ${item.time} ${item.time.length===0 ? '':'сек; '}`}
         </div>
 
     })
@@ -25,7 +25,9 @@ function Cart(props){
     return(
         <>
             <div className={`cart__result ${cartData.length === 0 ? 'empty' : ''}`}>
-                {trainType}
+               <div >
+                  <span className="train--heading">{trainType}</span>
+               </div>
                 {cartResult}
                 {buttonResult}
             </div>

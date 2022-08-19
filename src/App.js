@@ -35,10 +35,10 @@ function App() {
         let showDate = new Date()
 
         // let queryData = `📅  ${showDate.getDate()}.${('0' + (showDate.getMonth()+1)).slice(-2)} \n\n ${test.map(i=>`${(i.type).bold()}\n ⚖️ ${i.weight} кг\n ${i.reps.length===0 ? '⏱ '+ i.time + ' сек' : '🔁 ' + i.reps + ' раз'}\n`).join('\n')}`
-        let queryData = `⠀⠀⠀⠀⠀📅  ${showDate.getDate()}.${('0' + (showDate.getMonth() + 1)).slice(-2)}  📅`
+        let queryData = `📅  ${showDate.getDate()}.${('0' + (showDate.getMonth() + 1)).slice(-2)}`
         for (let trainType in test) {
             // queryData += `${trainType} \n ${test[trainType].map(i=>`${(i.type).bold()}\n ⚖️ ${i.weight} кг\n ${i.reps.length===0 ? '⏱ '+ i.time + ' сек' : '🔁 ' + i.reps + ' раз'}\n`).join('\n')}`
-            queryData += `\n\n-- ${trainType} -- \n ${test[trainType].map(i=>`\n${(i.type).bold()} ${i.weight.length===0 ? '' : '\n⚖️ ' + i.weight + 'кг.'} ${i.reps.length===0 ? '' : '\n🔁 ' + i.reps + ' повт.'} ${i.time.length===0 ? '' : '\n⏱ '+ i.time + ' сек'}`).join('\n')}`
+            queryData += `\n\n${('[ ' + trainType + ' ]').bold()} \n\n${test[trainType].map(i=>`${(i.type).italics()} — ${i.weight.length===0 ?'':i.weight + ' кг; '}${i.reps.length===0 ?'':i.reps + ' повт; '}${i.time.length===0 ?'':i.time + ' сек; '}`).join('\n')}`
         }
 
         console.log(queryData)
@@ -52,15 +52,23 @@ function App() {
                 method: 'POST',
                 body: JSON.stringify({
                     web_app_query_id: tele.initDataUnsafe.query_id,
+                    // result: {
+                    //     type: 'article',
+                    //     id: 1,
+                    //     title: 'Train summary',
+                    //     input_message_content: {
+                    //         message_text: queryData,
+                    //         parse_mode: 'HTML'
+                    //     }
+                    // }
                     result: {
-                        type: 'article',
+                        type: 'gif',
                         id: 1,
-                        title: 'test string',
-                        input_message_content: {
-                            message_text: queryData,
-                            parse_mode: 'HTML'
-                        }
-                    }
+                        gif_url: 'https://lucky-kataifi-5a54a1.netlify.app/static/media/ready2.76478b18b71bfd551689.gif',
+                        thumb_url: 'https://lucky-kataifi-5a54a1.netlify.app/static/media/ready2.76478b18b71bfd551689.gif',
+                        caption: queryData,
+                        parse_mode: 'HTML'
+                    },
                 }),
                 headers: {
                     'Content-Type': 'application/json'

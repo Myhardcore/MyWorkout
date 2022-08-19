@@ -26,7 +26,7 @@ p{
     background-color: #FFCB02;
 }
 .emom.active {
-    background-color: #409301;
+    background-color: #0DBE64;
 }
 .amrap{
     display: grid;
@@ -34,5 +34,5 @@ p{
     background-color: #FFCB02;
 }
 .amrap.active {
-    background-color: #409301;
+    background-color: #0DBE64;
 }
