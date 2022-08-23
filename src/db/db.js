@@ -12,6 +12,7 @@ import otgimaniya from '../images/otjimaniya.png'
 import podtyagivaniya from '../images/podtyagivania.png'
 import prisedaniya from '../images/prisedania.png'
 import prisedaniyaSHNS from '../images/prisedaniyaSShNS.png'
+import podjomNog from '../images/podjomNog.png'
 import rybki from '../images/rybka.png'
 import situpy from '../images/situps.png'
 import skakalkaDP from '../images/skakalkaDP.png'
@@ -38,16 +39,17 @@ export function getData() {
         { title:'НКП', price: 14, Image: nkp, id: 10 },
         { title:'Отжимания', price: 14, Image: otgimaniya, id: 11 },
         { title:'Подтягивания', price: 14, Image: podtyagivaniya, id: 12 },
-        { title:'Приседания', price: 14, Image: prisedaniya, id: 13 },
-        { title:'Приседания СШНС', price: 14, Image: prisedaniyaSHNS, id: 14 },
-        { title:'Рыбки', price: 14, Image: rybki, id: 15 },
-        { title:'Ситапы', price: 14, Image: situpy, id: 16 },
-        { title:'Скакалка ДП', price: 14, Image: skakalkaDP, id: 17 },
-        { title:'Скакалка ОП', price: 14, Image: skakalkaOP, id: 18 },
-        { title:'Скручивания', price: 14, Image: skruchivaniya, id: 19 },
-        { title:'Становая тяга', price: 14, Image: stanovayaTyaga, id: 20 },
-        { title:'Фронтальные приседания', price: 14, Image: frontPrised, id: 21 },
-        { title:'Ягодичный мостик', price: 14, Image: yagodichniyMostik, id: 22 },
+        { title:'Подъем ног', price: 14, Image: podjomNog, id: 13 },
+        { title:'Приседания', price: 14, Image: prisedaniya, id: 14 },
+        { title:'Приседания СШНС', price: 14, Image: prisedaniyaSHNS, id: 15 },
+        { title:'Рыбки', price: 14, Image: rybki, id: 16 },
+        { title:'Ситапы', price: 14, Image: situpy, id: 17 },
+        { title:'Скакалка ДП', price: 14, Image: skakalkaDP, id: 18 },
+        { title:'Скакалка ОП', price: 14, Image: skakalkaOP, id: 19 },
+        { title:'Скручивания', price: 14, Image: skruchivaniya, id: 120 },
+        { title:'Становая тяга', price: 14, Image: stanovayaTyaga, id: 21 },
+        { title:'Фронтальные приседания', price: 14, Image: frontPrised, id: 22 },
+        { title:'Ягодичный мостик', price: 14, Image: yagodichniyMostik, id: 23},
 
     ]
 }

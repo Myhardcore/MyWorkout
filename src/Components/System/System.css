@@ -36,3 +36,12 @@ p{
 .amrap.active {
     background-color: #0DBE64;
 }
+
+.other{
+    display: grid;
+    grid-template-columns:2fr 1fr 1fr;
+    background-color: #FFCB02;
+}
+.other.active {
+    background-color: #0DBE64;
+}
