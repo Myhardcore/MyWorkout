@@ -17,6 +17,9 @@
     border-radius: 10px;
 
 }
+.unfiltered_card{
+    display: none;
+}
 .card::before{
     position: absolute;
     content: '';

@@ -3,6 +3,7 @@ import Cart from "./Components/Cart/Cart";
 import Card from "./Components/Card/Card";
 import {useState,useEffect} from "react";
 import System from "./Components/System/System";
+import Search from "./Components/Search/Search";
 
 const { getData } = require('./db/db')
 const foods = getData()
@@ -13,23 +14,29 @@ const tele = window.Telegram.WebApp;
 function App() {
 
     let [page, setPage] = useState(0)
-
     let [test, setTest] = useState({})
+    let [searchCopy, setSearchCopy] = useState('')
+
     useEffect(()=> {
         tele.ready()
         tele.enableClosingConfirmation()
 
     })
     const totalDataHandler = (enteredTotal) => {
-        // let totalData = [
-        //     ...enteredTotal
-        // ]
-        // console.log(totalData)
-        // setTest(totalData)
         let totalData = JSON.parse(JSON.stringify(enteredTotal));
         setTest(totalData)
         console.log(test)
     }
+    // Функционал поиска ______________________
+    const onSearchValueCopy = (enteredSearchValue) => {
+        setSearchCopy(enteredSearchValue)
+        console.log(searchCopy)
+    }
+    const filteredSearch =  foods.filter(train => {
+        return train.title.toLowerCase().includes(searchCopy.toLowerCase())
+    })
+    // ________________________________________
+
     const onAddingTrain = (event)=>{
         event.preventDefault()
         let showDate = new Date()
@@ -81,10 +88,11 @@ function App() {
   return (<>
       {
       page === 0 ? <System setPage={setPage} onAddingTrain={onAddingTrain} dataForClass={test}/> : <div>
+          <Search onSearchValue={onSearchValueCopy} searchCopy={searchCopy}/>
           <Cart totalData={test} onAddingTrain={onAddingTrain} setPage={setPage} />
           <div className="cards__container">
               {foods.map(food=>{
-                  return <Card food={food} key={food.id} onSetCartItems={totalDataHandler}/>
+                  return <Card food={food} key={food.id} onSetCartItems={totalDataHandler} searchCopy={setSearchCopy} cardClass={filteredSearch.some(i => i.title === food.title ) ?  '' : 'unfiltered_card'}/>
               })}
           </div>
       </div>

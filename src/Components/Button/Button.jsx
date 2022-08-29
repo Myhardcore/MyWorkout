@@ -7,7 +7,8 @@ function Button(props) {
             className={`btn ${
             (props.type === 'add' && 'add') || 
             (props.type === 'remove' && 'remove') || 
-            (props.type === 'checkout' && 'checkout')
+            (props.type === 'checkout' && 'checkout') ||
+            (props.type === 'final' && 'final')
         }`}
         disabled={props.disable}
         onClick={props.onClick}

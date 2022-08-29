@@ -12,7 +12,7 @@
     justify-content: space-between;
     color: black;
     text-align: center;
-
+    font-size: 12px;
 
 }
 .cart__result--line{
@@ -23,4 +23,5 @@ background-color: transparent;
 }
 .train--heading{
     background-color: #FFCB02;
+    font-size: 14px;
 }

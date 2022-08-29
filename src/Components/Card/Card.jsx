@@ -33,12 +33,12 @@ const addTrainHandler = (event) => {
     enteredKG.current.value = '';
     enteredRep.current.value = '';
     enteredSec.current.value = '';
-
+    props.searchCopy('')
     }
 // npm i react-icons
 const buttonBlock = trainAdded === false ? (<Button title={'Добавить'} type={'add'} onClick={addTrainHandler} />) : (<Button title={<FaCheck />} type={'checkout'}  onClick={addTrainHandler}/>)
     return(
-        <div className={'card'}>
+        <div className={`card ${props.cardClass}`}>
             <div className="image__container">
                 <img src={Image} alt={title}/>
             </div>
