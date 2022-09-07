@@ -21,6 +21,9 @@ import skruchivaniya from '../images/skruchivaniya.png'
 import stanovayaTyaga from '../images/stanovayaTyaga.png'
 import frontPrised from '../images/frontalnyePrisedaniya.png'
 import yagodichniyMostik from '../images/yagoMostik.png'
+import zashagivaniaNaKub from '../images/zahoszhdeniyeNaKub.png'
+import zaprigicaniyaNaKub from '../images/zaprigivaniaNaKub.png'
+import bolgarskiePrisedania from '../images/bolgarskiyePrisedaniya.png'
 import readyGif from '../images/ready.gif'
 import readyGif2 from '../images/ready2.gif'
 
@@ -31,27 +34,27 @@ export function getData() {
         { title:'Байк', price: 15, Image: bike, id: 2},
         { title:'Берпи', price: 3.5, Image: berpi, id: 3 },
         { title:'Броски мяча', price: 14, Image: broskiMyacha, id: 4 },
-        { title:'Выпады', price: 14, Image: vipady, id: 5 },
-        { title:'Горизонтальные подтягивания', price: 14, Image: gorPodtyagivaniya, id: 6 },
-        { title:'Гребля', price: 14, Image: greblya, id: 7 },
-        { title:'Жим лёжа', price: 14, Image: jimLega, id: 8 },
-        { title:'Зашагивания на куб', price: 14, id: 9 },
-        { title:'Махи гирей', price: 14, Image: mahiGirey, id: 10 },
-        { title:'НКП', price: 14, Image: nkp, id: 11 },
-        { title:'Отжимания', price: 14, Image: otgimaniya, id: 12 },
-        { title:'Подтягивания', price: 14, Image: podtyagivaniya, id: 13 },
-        { title:'Подъем ног', price: 14, Image: podjomNog, id: 14 },
-        { title:'Приседания', price: 14, Image: prisedaniya, id: 15 },
-        { title:'Приседания СШНС', price: 14, Image: prisedaniyaSHNS, id: 16 },
-        { title:'Прыжки на куб', price: 14, id: 17 },
-        { title:'Рыбки', price: 14, Image: rybki, id: 18 },
-        { title:'Ситапы', price: 14, Image: situpy, id: 19 },
-        { title:'Скакалка ДП', price: 14, Image: skakalkaDP, id: 20 },
-        { title:'Скакалка ОП', price: 14, Image: skakalkaOP, id: 21 },
-        { title:'Скручивания', price: 14, Image: skruchivaniya, id: 22 },
-        { title:'Становая тяга', price: 14, Image: stanovayaTyaga, id: 23 },
-        { title:'Фронтальные приседания', price: 14, Image: frontPrised, id: 24 },
-        { title:'Ягодичный мостик', price: 14, Image: yagodichniyMostik, id: 25},
-
+        { title:'Болгарские приседания', price: 14, Image: bolgarskiePrisedania, id: 5 },
+        { title:'Выпады', price: 14, Image: vipady, id: 6 },
+        { title:'Горизонтальные подтягивания', price: 14, Image: gorPodtyagivaniya, id: 7 },
+        { title:'Гребля', price: 14, Image: greblya, id: 8 },
+        { title:'Жим лёжа', price: 14, Image: jimLega, id: 9 },
+        { title:'Зашагивания на куб', Image:zashagivaniaNaKub, price: 14, id: 10 },
+        { title:'Махи гирей', price: 14, Image: mahiGirey, id: 11 },
+        { title:'НКП', price: 14, Image: nkp, id: 12 },
+        { title:'Отжимания', price: 14, Image: otgimaniya, id: 13 },
+        { title:'Подтягивания', price: 14, Image: podtyagivaniya, id: 14 },
+        { title:'Подъем ног', price: 14, Image: podjomNog, id: 15 },
+        { title:'Приседания', price: 14, Image: prisedaniya, id: 16 },
+        { title:'Приседания СШНС', price: 14, Image: prisedaniyaSHNS, id: 17 },
+        { title:'Прыжки на куб', Image:zaprigicaniyaNaKub, price: 14, id: 18 },
+        { title:'Рыбки', price: 14, Image: rybki, id: 19 },
+        { title:'Ситапы', price: 14, Image: situpy, id: 20 },
+        { title:'Скакалка ДП', price: 14, Image: skakalkaDP, id: 21 },
+        { title:'Скакалка ОП', price: 14, Image: skakalkaOP, id: 22 },
+        { title:'Скручивания', price: 14, Image: skruchivaniya, id: 23 },
+        { title:'Становая тяга', price: 14, Image: stanovayaTyaga, id: 24 },
+        { title:'Фронтальные приседания', price: 14, Image: frontPrised, id: 25 },
+        { title:'Ягодичный мостик', price: 14, Image: yagodichniyMostik, id: 26},
     ]
 }
