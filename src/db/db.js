@@ -25,8 +25,10 @@ import zashagivaniaNaKub from '../images/zahoszhdeniyeNaKub.png'
 import zaprigicaniyaNaKub from '../images/zaprigivaniaNaKub.png'
 import bolgarskiePrisedania from '../images/bolgarskiyePrisedaniya.png'
 import rivokGiri from '../images/rivkiGiri.png'
+import tyagaVnaklone from '../images/tyagaVnaklone.png'
 import readyGif from '../images/ready.gif'
 import readyGif2 from '../images/ready2.gif'
+
 
 
 export function getData() {
@@ -56,7 +58,11 @@ export function getData() {
         { title:'Скакалка ОП', price: 14, Image: skakalkaOP, id: 23 },
         { title:'Скручивания', price: 14, Image: skruchivaniya, id: 24 },
         { title:'Становая тяга', price: 14, Image: stanovayaTyaga, id: 25 },
-        { title:'Фронтальные приседания', price: 14, Image: frontPrised, id: 26 },
-        { title:'Ягодичный мостик', price: 14, Image: yagodichniyMostik, id: 27},
+        { title:'Тяга в наклоне', price: 14, Image: tyagaVnaklone, id: 26 },
+        { title:'Фронтальные приседания', price: 14, Image: frontPrised, id: 27 },
+        { title:'Ягодичный мостик', price: 14, Image: yagodichniyMostik, id: 28},
     ]
 }
+
+
+// https://workoutlabs.com/exercise-guide/
